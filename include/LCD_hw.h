@@ -8,7 +8,6 @@
 #ifndef _LCD_HW_H
 #define	_LCD_HW_H
 
-#define LCD_CTL_PORT GPIOE_BASE
 #define PIN_RS	0
 #define PIN_RW  1
 #define PIN_E		2
