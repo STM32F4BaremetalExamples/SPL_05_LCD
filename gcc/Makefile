@@ -5,7 +5,7 @@ SOURCE_DIRS:=  device/source ../source ../STM32F4xx_StdPeriph_Driver/src ../reta
 SPL_FILES:= $(notdir $(wildcard ../STM32F4xx_StdPeriph_Driver/src/*.c ))
 
 #the C files to compile
-CFILES:= system_stm32f4xx.c $(SPL_FILES) main.c retarget_stm32f4.c  serial_stdio.c
+CFILES:= system_stm32f4xx.c $(SPL_FILES) main.c retarget_stm32f4.c  serial_stdio.c LCD.c LCD_stm32f4.c
 #the assembly files assemble
 ASM_FILES:= startup_stm32f401xe.S
 #the target microcontroller
