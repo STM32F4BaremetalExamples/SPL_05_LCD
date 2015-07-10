@@ -1,1 +1,6 @@
-/gcc/nbproject/private/
+/gcc/nbproject/
+/gcc/objects/
+/gcc/salida.elf
+/mdk/Listings
+/mdk/Objects/
+/mdk/*.uvguix.*
