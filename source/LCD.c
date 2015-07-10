@@ -16,17 +16,36 @@ void lcd_sendChar(char c){
 void lcd_init(void){
 	lcd_hw_init();
 	lcd_hw_outputCtrl(PIN_RW,RW_WRITE);
+	//set outputs to default state
 	lcd_hw_output_LowNibble(0xF);
 	lcd_hw_outputCtrl(PIN_RW,RW_WRITE);
 	lcd_hw_outputCtrl(PIN_E,STATE_LOW);
 	lcd_hw_outputCtrl(PIN_RS,RS_INSTRUCTION);
-	lcd_hw_delay_ms(30);
+	lcd_hw_delay_ms(30);//wait for lcd initialization
+	//
+	lcd_hw_output_LowNibble(0x3);
+	lcd_hw_delay_us(1);
+	lcd_hw_outputCtrl(PIN_E,STATE_HIGH);
+	lcd_hw_delay_us(1);
+	lcd_hw_outputCtrl(PIN_E,STATE_LOW);
+  lcd_hw_delay_ms(4);
+	//
+	for(int i=0;i<2;i++){
+		lcd_hw_output_LowNibble(0x3);
+		lcd_hw_delay_us(1);
+		lcd_hw_outputCtrl(PIN_E,STATE_HIGH);
+		lcd_hw_delay_us(1);
+		lcd_hw_outputCtrl(PIN_E,STATE_LOW);
+		lcd_hw_delay_ms(1);
+	}
+	//configure two 4 wire mode 
 	lcd_hw_output_LowNibble(0x2);
 	lcd_hw_delay_us(1);
 	lcd_hw_outputCtrl(PIN_E,STATE_HIGH);
 	lcd_hw_delay_us(1);
 	lcd_hw_outputCtrl(PIN_E,STATE_LOW);
-  lcd_hw_delay_ms(1);	
+  lcd_hw_delay_ms(1);
+	//	
 	lcd_sendCommand(0x2C);
 	lcd_sendCommand(0x0C);
 	lcd_sendCommand(0x01);
