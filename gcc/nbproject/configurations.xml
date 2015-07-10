@@ -12,6 +12,10 @@
                    displayName="SPL_05_LCD"
                    projectFiles="true"
                    root="..">
+      <logicalFolder name="include" displayName="include" projectFiles="true">
+        <itemPath>../include/LCD.h</itemPath>
+        <itemPath>../include/LCD_hw.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="retarget" displayName="retarget" projectFiles="true">
         <logicalFolder name="source" displayName="source" projectFiles="true">
           <itemPath>../retarget/source/retarget_stm32f4.c</itemPath>
@@ -19,6 +23,8 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="source" displayName="source" projectFiles="true">
+        <itemPath>../source/LCD.c</itemPath>
+        <itemPath>../source/LCD_stm32f4.c</itemPath>
         <itemPath>../source/main.c</itemPath>
       </logicalFolder>
       <logicalFolder name="STM32F4xx_StdPeriph_Driver"
@@ -72,6 +78,7 @@
   <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
   <sourceRootList>
     <Elem>.</Elem>
+    <Elem>../include</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -278,12 +285,20 @@
             tool="0"
             flavor2="3">
       </item>
+      <item path="../include/LCD.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/LCD_hw.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../retarget/source/retarget_stm32f4.c"
             ex="false"
             tool="0"
             flavor2="3">
       </item>
       <item path="../retarget/source/serial_stdio.c" ex="false" tool="0" flavor2="3">
+      </item>
+      <item path="../source/LCD.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../source/LCD_stm32f4.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="../source/main.c" ex="false" tool="0" flavor2="3">
       </item>

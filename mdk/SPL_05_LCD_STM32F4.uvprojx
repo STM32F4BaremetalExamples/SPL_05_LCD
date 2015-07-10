@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER STM32F401xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\STM32F4xx_StdPeriph_Driver\inc;..\retarget\include</IncludePath>
+              <IncludePath>..\STM32F4xx_StdPeriph_Driver\inc;..\retarget\include;..\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -427,6 +427,16 @@
               <FileName>serial_stdio.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\retarget\source\serial_stdio.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\LCD.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_stm32f4.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\LCD_stm32f4.c</FilePath>
             </File>
           </Files>
         </Group>
